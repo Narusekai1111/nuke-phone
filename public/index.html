@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discord nuke ツール</title>
+  <style>
+    body {
+      background-color: #1e003f;
+      color: #d1c4e9;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 480px;
+      margin: auto;
+      padding: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.4rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #7e57c2;
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #9c80f1;
+    }
+    #status {
+      margin-top: 1rem;
+      min-height: 2rem;
+    }
+    a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #9a7ae8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Discord nuke ツール</h1>
+
+  <label>
+    ボットトークン（必須）
+    <input type="text" id="token" autocomplete="off" />
+  </label>
+
+  <label>
+    対象サーバーID（必須）
+    <input type="text" id="serverId" autocomplete="off" />
+  </label>
+
+  <label>
+    作成チャンネル名（30個作成されます。）
+    <input type="text" id="channelName" placeholder="例: my-channel" />
+  </label>
+
+  <label>
+    作成ロール名（15個作成されます。）
+    <input type="text" id="roleName" placeholder="例: my-role" />
+  </label>
+
+  <label>
+    サーバー名変更（任意）
+    <input type="text" id="serverName" placeholder="新しいサーバー名" />
+  </label>
+
+  <label>
+    サーバーアイコン変更（任意）<br />
+    PNG/JPEG画像ファイルを選択してください
+    <input type="file" id="serverIcon" accept="image/png, image/jpeg" />
+  </label>
+
+  <label>
+    送信メッセージ（必須）
+    <textarea id="messageText" rows="4" placeholder="送信する文章"></textarea>
+  </label>
+
+  <button id="startBtn">開始</button>
+
+  <div id="status"></div>
+
+  <footer>
+    開発者：みぞがみ<br />
+    <a href="https://discord.gg/KmFPMeGC" target="_blank" rel="noopener noreferrer">サポートDiscordサーバー</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
